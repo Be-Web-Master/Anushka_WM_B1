@@ -1,0 +1,59 @@
+*{
+    margin:"0";
+    padding:"0";
+    font-family:"gilroy";
+}
+body{
+    max-width:400px;
+    min-height:100vh;
+    margin:0 auto;
+    background-image: url(https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHNreXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form{
+    width:100%;
+    height:500px;
+    /* background-color: aqua; */
+
+}
+meter{
+    width: 100%;
+}
+label{
+    display:block;
+    margin:10px 0;
+    color: black;
+    font-weight: 600;
+}
+button[type="submit"],
+button[type="reset"]{
+    background-color: transparent;
+    border: 1px solid black;   
+    border-radius: 15px;
+    padding: 10px 25px;
+    font-size: 17px;
+    margin-right: 20px;
+}
+#submit:hover{
+    background-color: rgb(39, 39, 156);
+    color:white;
+}
+#reset:hover{
+    background-color: rgb(148, 94, 94);
+    color:white;
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],input[type="range"]{
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid black;
+    /* border-radius: 5px; */
+    padding: 12px;
+    background-color: transparent;
+    
+}
