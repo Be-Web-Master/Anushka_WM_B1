@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    /* background-color: #501a1a; */
+    display: flex;
+}
+#left{
+    min-width: 50%;
+    max-height: 100%;
+    /* background-color: aquamarine; */
+    background-image: url(https://images.unsplash.com/photo-1616056547432-0e43213a1474?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM4fHxiYWNrZ3JvdW5kJTIwaW1hZ2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+#right{
+    width: 50%;
+    height: 100%;
+    padding: 60px 120px;
+    font-family: "gilroy";
+}
+h1{
+    font-weight: 600;
+}
+form{
+    width: 70%;
+    /* background-color: beige; */
+    padding: 30px 0;
+}
+input[type="text"],
+input[type="number"],
+input[type="email"]{
+    width: 100%;
+    margin-bottom: 15px;
+    padding:12px 0;
+}
+input{
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.418);
+    background-color: transparent;
+    /* background-color: brown; */
+}
+label[for="gender"],
+label[for="work"]{
+    font-weight: 600;
+    display:block;
+}
+label{
+    margin:10px 0;
+    color: black;
+}
+select{
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.418);
+    padding:12px 0;
+    background-color: transparent;
+}
+textarea{
+    width: 100%;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.418);
+    padding:12px 0;
+    background-color: transparent;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
