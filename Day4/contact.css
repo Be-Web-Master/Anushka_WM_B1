@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "gilroy";
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(49,43,39);
+    position: relative;
+}
+#box{
+    width: 90vw;
+    height: 80vh;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    background-color: rgb(69,63,59);
+    display: flex;
+    position: relative;
+}
+#left{
+    width: 60%;
+    height: 100%;
+    /* background-color: #fff; */
+    display: flex;
+
+}
+#right-img{
+    width: 40%;
+}
+img{
+    position: absolute;
+    height: 110%;
+    width: 20%;
+    top: -5%;
+    rotate: 180deg;
+}
+#left-text{
+    width: 60%;
+    height: 100%;
+    /* text-align: center; */
+    padding: 10px 100px;
+    /* background-color: #fff; */
+    color: white;
+}
+#left-text>h1{
+    font-size: 60px;
+    margin-top: 40px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    /* background-color: aquamarine; */
+}
+#left-mid{
+    position: relative;
+    top: 5%;
+    display: flex;
+}
+#left-mid h3{
+    margin-top: 30px;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.6;
+}
+#circle{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(69,63,59);
+    border-radius: 50%;
+    right: -48%;
+}
+#circle>i{
+    font-size: 30px;
+    position: relative;
+    left: 63%;
+    top: 25%;
+}
+h4{
+    font-weight: 500;
+    font-size: 13px;
+    position: relative;
+    bottom: -25%;
+    opacity: 0.6;
+    color:rgb(130,179,122) ;
+}
+
+#right{
+    width: 40%;
+    height: 100%;
+    background-color: rgb(130,179,122);
+    padding: 80px 50px;
+}
+input{
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #ffffff3c;
+    outline: none;
+    color: #fff;
+}
+::placeholder{
+    color: #fff;
+    font-size: 15px;
+}
+select{
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #ffffff3c;
+    color: #fff;
+    margin-top: 20px;
+    background-color: transparent;
+    outline: none;
+}
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 2px solid #ffffff44;
+    outline: none;
+    color: #fff;
+}
+button{
+    font-size: 15px;
+    margin-top: 20px;
+    position: relative;
+    right: -290px;
+    padding: 15px 60px;
+    background-color: rgb(49,43,39);
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+}
