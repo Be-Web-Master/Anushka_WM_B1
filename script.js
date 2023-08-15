@@ -112,3 +112,82 @@ add some more properties and print student details.*/
 // })
 // delete obj.name
 // console.log(obj)
+
+//Q11: Create an object and check for isSealed after applying .seal and without applying .seal
+
+// const obj = {
+//     name: "Anushka",
+//     Age:"21"
+// }
+// console.log(Object.isSealed(obj))
+// Object.seal(obj)
+// console.log(Object.isSealed(obj))
+
+//Q12: Create an object and check for isExtensible after applying .preventExtensions and without applying .preventExtensions
+
+// const obj ={
+//     name:"Anushka",
+//     Age:"21"
+// }
+// console.log(Object.isExtensible(obj))
+// Object.preventExtensions(obj);
+// console.log(Object.isExtensible(obj))
+
+//Q13: Create an object and check for isFrozen after applying .freeze and without applying .freeze
+
+// const obj ={
+//     name:"Anushka",
+//     Age:"21"
+// }
+// console.log(Object.isFrozen(obj))
+// Object.freeze(obj);
+// console.log(Object.isFrozen(obj))
+
+//Create an object and gets it’s prototype
+
+// const obj ={
+//     name: "Anushka",
+//     Age: "21"
+// }
+// console.log(Object.getPrototypeOf(obj))
+
+//Q15: Create two objects obj1, obj2 and set obj1’s prototype on the obj2 object and try 
+// to get obj1 properties through obj2, which should not exist in obj2 before.
+
+// const obj1={
+//     name:"Anushka",
+//     Age:"21"
+// }
+
+// const obj2={
+//     RollNo:"40"
+// }
+
+// Object.setPrototypeOf(obj1 , obj2)
+// console.log(obj1.RollNo)
+
+// Q16: Create an object and apply .entries then create a new object using .fromEntries() and assign it in myObj2.
+
+// const obj = {
+//     name: "Anushka",
+//     Age: "21"
+// }
+
+// console.log(Object.entries(obj))
+
+// const obj = new Map([
+//     ['name', 'Anushka'],
+//     ['age', 21],
+//   ]);
+// const obj2 = Object.fromEntries(obj);
+// console.log(obj2)
+
+// Q17: Create an object and try to check two properties using .hasOwnProperty, second property should not exist.
+
+const obj ={
+    name: "Anushka",
+    Age : "21"
+}
+console.log(Object.hasOwn(obj, 'name'));
+
+console.log(Object.hasOwn(obj, 'date'));
