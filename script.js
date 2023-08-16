@@ -6,12 +6,13 @@
 // Q2: What is the alphabet on index 3 in the given string from the end?
 
 // const sentence = 'The quick brown fox jumps over the lazy dog.';
-// console.log(sentence.at(-3))
+// console.log(sentence.slice(-3,-2))
 
 // Q3: What will be the character code of the word f, using string method?
 
 // const sentence = 'The quick brown fox jumps over the lazy dog.';
-// console.log(sentence.charCodeAt("f"))
+// const ltr = sentence.indexOf("f")
+// console.log(sentence.charCodeAt(ltr))
 
 // Q4: Use the concat method to create a full name by combining the first name and last name. 
 // Store the result in the variable ‘fullName’ and print it.
