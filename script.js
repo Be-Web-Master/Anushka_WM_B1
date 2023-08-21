@@ -58,19 +58,23 @@
 
 //9. Create a function that takes a number as input and checks if it is within the range of the largest and smallest floating-point numbers. Return true if it's within the range, otherwise return false. (Method: Number.MAX_VALUE, Number.MIN_VALUE)
 
-// function minMaxValue(num){
-
-// }
+function minMaxValue(num){
+    const x = Number.MAX_VALUE,
+    y= Number.MIN_VALUE;
+    if(num<=x && num>=y){ return true}
+    else{return false}
+}
+console.log(minMaxValue(23335))
 
 //10.Write a function that takes a number as input and checks if it is within the range of the largest and smallest integers. Return true if it's within the range, otherwise return false. (Method: Number.MAX_SAFE_INTEGER, Number.MIN_SAFE_INTEGER)
 
-// function minMaxInteger(num){
-//     const x = Number.MIN_SAFE_INTEGER,
-//     y= Number.MAX_SAFE_INTEGER;
-//     if(y>=num && x<=num){ return true}
-//     else{return false}
-// }
-// console.log(minMaxInteger(2.5))
+function minMaxInteger(num){
+    const x = Number.MIN_SAFE_INTEGER,
+    y= Number.MAX_SAFE_INTEGER;
+    if(num<=y && num>=x){ return true}
+    else{return false}
+}
+console.log(minMaxInteger(420.365))
 
 //11. Implement a function that takes a number as input and returns true if it equals negative infinity, otherwise return false. (Method: Number.NEGATIVE_INFINITY)
 
@@ -83,9 +87,9 @@
 
 //12.Create a function that takes a number as input and returns true if it equals positive infinity, otherwise return false. (Method: Number.POSITIVE_INFINITY)
 
-function positiveInfinite(num){
-    if(num === Number.POSITIVE_INFINITY) {return true}
-    else return false
-}
-console.log(positiveInfinite(Number.MAX_VALUE))
-console.log(positiveInfinite(Number.MAX_VALUE * 2))
+// function positiveInfinite(num){
+//     if(num === Number.POSITIVE_INFINITY) {return true}
+//     else return false
+// }
+// console.log(positiveInfinite(Number.MAX_VALUE))
+// console.log(positiveInfinite(Number.MAX_VALUE * 2))
