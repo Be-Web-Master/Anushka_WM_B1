@@ -246,8 +246,9 @@
 //47. Change the text content of the <p> element within the <div> with class "content" to "Updated paragraph text".
 
 // const elem = document.getElementsByClassName("content")[0]
-// elem.replaceWith("Updated paragraph text.")
-// console.log(elem)
+// const elem2 = elem.querySelector("p")
+// elem2.textContent = "Updated paragraph text."
+// console.log(elem2)
 
 //48. Change the background color of the <div> element with ID "container" to blue.
 
@@ -276,11 +277,11 @@
 
 //51.Wrap the contents of the <div> with ID "container" in a new <div> with class "wrapper".
 
-const elem = document.getElementById("container")
-const wrapper = document.createElement("div")
-wrapper.className="wrapper";
-wrapper.appendChild(elem)
-console.log(wrapper)
+// const elem = document.getElementById("container")
+// const wrapper = document.createElement("div")
+// wrapper.className="wrapper";
+// wrapper.appendChild(elem)
+// console.log(wrapper)
 
 //52. Remove the first <li> element from the <ul> with class "list".
 
@@ -329,10 +330,10 @@ console.log(wrapper)
 
 //61. Create a new <div> element, give it a class of "new-div", and append it to the body
 
-// const newDiv = document.createElement("div")
-// newDiv.className="new-div"
-// const div = document.body.append(newDiv, " hello")
-// console.log(div)
+const newDiv = document.createElement("div")
+newDiv.className="new-div"
+const div = document.body.append(newDiv)
+console.log(newDiv)
 
 //62. Append a new <p> element with the text "New paragraph" to the <div> with class "inner-box"
 
