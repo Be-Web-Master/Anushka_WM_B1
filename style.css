@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+form{
+    margin: 20px;
+}
+label{
+    display: block;
+    margin-top: 10px;
+}
+.gender-container{
+    display: flex;
+    margin: 8px 0 5px;
+}
+button{
+    display: block;
+    padding: 10px 20px;
+}
+p{
+    color: red;
+}
