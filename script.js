@@ -1,4 +1,4 @@
-const btn = document.getElementById("btn")
+const submitButton = document.getElementById("btn")
 const firstName = document.getElementById("firstName")
 const lastName = document.getElementById("lastName")
 const age = document.getElementById("age")
@@ -6,24 +6,12 @@ const phone = document.getElementById("phone")
 const email = document.getElementById("email")
 const male = document.getElementById("male")
 const female = document.getElementById("female")
-const errorMessage = document.getElementsByClassName("error")[0];
+const errorMessage = document.getElementById("error");
 
-function checkedAge(input) {
-    // console.log(input)
-    if (input === 'age' && age.value < 18) {
-        errorMessage.innerText = "age should be grater than 18"
-    }
-    else if (input === 'phone' && phone.value.length != 10) {
-        errorMessage.innerText = "no. should have 10 digit"
+function validatePhoneNumber(){ error.innerText = phone.value.length !== 10 ? "number length should be 10" : ""; }
+function validateAge(){ error.innerText = age.value < 18 ? "Your age should be greater or equal to 18" : ""; }
 
-    }
-    else {
-        errorMessage.innerText = ""
-
-    }
-}
-
-function submitDetails(event) {
+function handleOnSubmit(event) {
 
     event.preventDefault();
     console.log(
@@ -36,11 +24,8 @@ function submitDetails(event) {
             gender: female.checked ? "female" : "male"
         }
     )
-}
-btn.addEventListener("click", () => {
     if (errorMessage.innerText !== "") {
-        btn.innerText = "Clicked"
-        btn.style.backgroundColor = "green"
+        submitButton.innerText = "Clicked"
+        submitButton.style.backgroundColor = "green"
     }
-       
-})
+}

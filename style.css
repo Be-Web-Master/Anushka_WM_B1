@@ -3,19 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
-form{
+#formDiv{
     margin: 20px;
 }
-p{
+#error{
     color: red;
 }
-label{
+label[for="firstName"]
+,[for="lastName"]
+,[for="age"]
+,[for="phone"]
+,[for="email"]
+,[for="gender"]
+,[for="male"]
+,[for="female"]{
     display: block;
     margin-top: 10px;
 }
 .gender-container{
     display: flex;
 }
-button{
+#btn{
     padding: 10px 20px ;
 }
