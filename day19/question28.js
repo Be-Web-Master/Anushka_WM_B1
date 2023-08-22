@@ -1,6 +1,5 @@
 // 28. Given a list of 8 individuals with their names and ages, please perform the following tasks:
 // Sort the names in ascending order based on their ages.
-// Determine the individuals who are eligible to vote (age should be above 40).
 
 
 let persons = [
@@ -20,13 +19,29 @@ for (const obj of persons) {
         if(obj.age>60) return obj.age
     })
 }
-console.log(ageResult)
+// console.log(ageResult)
 
 // Sort the names in ascending order based on their ages.
-let nameResult
-for(let i =0; i<persons.length; i++){
-    nameResult = persons.sort((a,b) => {
-        a.age - b.age
+let min = persons[0]
+// console.log(min)
+let sortedArr =[];
+for(let i =1; i<persons.length; i++){
+    if(persons[i].age < min.age){
+       min = persons[i].age;
+    //    console.log(min)
+       sortedArr.push(persons[i]);
+    }
+    
+}
+console.log(sortedArr)
+// console.log(nameResult)
+
+// Determine the individuals who are eligible to vote (age should be above 40).
+
+let eligible
+for (const obj of persons) {
+    eligible = persons.filter((obj)=>{
+        if(obj.age>=40) return obj.age
     })
 }
-console.log(nameResult)
+// console.log(eligible)
