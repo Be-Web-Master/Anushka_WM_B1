@@ -2,7 +2,11 @@
 
 const btn = document.getElementById("btn")
 const newDiv = document.getElementById("new-div")
+const closeBtn = document.getElementById("close")
 
 btn.addEventListener("click",()=>{
-    
+    newDiv.style.opacity = "1"
+})
+closeBtn.addEventListener("mousedown",()=>{
+    newDiv.style.opacity = "0"
 })
