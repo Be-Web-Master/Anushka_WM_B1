@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#formDiv{
+    margin: 20px;
+}
+#error{
+    color: red;
+}
+.inputLabel{
+    display: block;
+    margin-top: 10px;
+}
+.gender-container{
+    display: flex;
+}
+#btn{
+    padding: 10px 20px ;
+}
