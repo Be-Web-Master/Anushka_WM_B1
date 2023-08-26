@@ -9,7 +9,11 @@ body,html{
 #table{
     margin: 0 auto;
 }
-#rowBtn,#columnBtn{
+.container{
+    margin: 0 auto;
+}
+#rowBtn,#columnBtn,#clearBtn{
+    border-radius: 5px;
     padding: 10px;
     margin: 10px;
 }
