@@ -15,6 +15,14 @@
         </table>
         <button id="rowBtn">Add Row</button>
         <button id="clearBtn">Clear</button>
+        <form id="sort-form">
+            <select id="columnDropdown" name="columnsDropdown"></select>
+            <input name="sortOrder" value="Ascending" type="radio" id="asc" />
+            <label for="asc">Ascending</label>
+            <input name="sortOrder" value="Descending" id="desc" type="radio" />
+            <label for="desc">Descending</label>
+            <button id="sort-btn" type="submit">Sort</button>
+        </form>
     </div>
 </body>
 <script src="script.js"></script>
