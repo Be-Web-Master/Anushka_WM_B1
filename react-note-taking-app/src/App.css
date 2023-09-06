@@ -1,0 +1,43 @@
+.card{
+  box-shadow: 5px 5px 5px 5px rgba(128,128,128,0.153);
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-left: 30px;
+}
+.Note{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+}
+.noteTitle{
+  padding: 10px 20px;
+  font-size: 15px;
+}
+.noteDescription{
+  padding: 10px 20px;
+  font-size: 15px;
+}
+.form{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.submitButton{
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: rgb(78, 78, 176);
+  border: none;
+}
+.deleteNote{
+  font-size: 12px;
+  margin: 0 10px 0 10px;
+}
+.editNote{
+  font-size: 12px;
+}
