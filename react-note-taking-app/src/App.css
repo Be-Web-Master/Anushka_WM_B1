@@ -24,8 +24,10 @@
 }
 .form{
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   padding: 20px;
+  width: 400px;
+  gap: 20px;
 }
 .submitButton{
   border-radius: 10px;
@@ -33,6 +35,8 @@
   color: #fff;
   background-color: rgb(78, 78, 176);
   border: none;
+  width: 100px;
+  
 }
 .deleteNote{
   font-size: 12px;

@@ -15,6 +15,7 @@ function NoteTakingApp() {
   }
   function deleteNote(id) {
     setNotes((data) => data.filter((elem, i) => i !== id))
+    setShowEditModal(false)
   }
   function editNote(id){
       setTitle(notes[id].title)
@@ -47,7 +48,6 @@ function NoteTakingApp() {
       ></textarea>
       <button className='submitButton' type='submit' onClick={buttonSubmit} >Submit</button>
     </form>
-    <hr />
 
     <div className='Note'>
       {notes.map((notes, i) => {
@@ -83,7 +83,7 @@ function NoteTakingApp() {
           cols="50"
           required
         ></textarea>
-        <button className='submitButton' type='submit' onClick={buttonSubmit} >Submit</button>
+        <button className='submitButton' type='submit' onClick={buttonSubmit} >Update</button>
       </form>
     </div>)}
   </>)
