@@ -2,11 +2,18 @@ import { UseEffectComp } from "./UseEffect";
 import { useState } from "react"
 import { InputForm } from "./InputForm"
 import { DataList, dataArray } from "./DataList"
+import { UseRefDemo } from "./UseRefDemo";
+import { UseContextdemo } from "./UseContextdemo";
+import { UseReducerDemo } from "./UseReducerDemo";
 const ReactComp = () => {
 
-  return( <>
-    <UseEffectComp />
+  return (<>
+    {/* <UseEffectComp /> */}
+    {/* <UseRefDemo /> */}
+    {/* <UseContextdemo /> */}
+    <UseReducerDemo />
   </>)
+
   //   const increaseCount = () => {
   //     setCount(count + 1)
   //   }
