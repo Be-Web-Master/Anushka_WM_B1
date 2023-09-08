@@ -1,29 +1,45 @@
 import './App.css'
-import { useState } from 'react'
+import { useState, useRef ,useEffect} from 'react'
 function NoteTakingApp() {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [notes, setNotes] = useState([])
   const [showEditModal, setShowEditModal] = useState(false);
+  const firstref = useRef(null)
 
   const buttonSubmit = () => {
     const newNotes = { title, description }
     setNotes([...notes, newNotes])
     setTitle('')
     setDescription('')
-    console.log(newNotes)
+  }
+  const removeModal = () => {
+    const newNotes = { title, description }
+    setNotes([...notes, newNotes])
+    setTitle('')
+    setDescription('')
+    const f = firstref.current
+    console.log(firstref)
+    f.style.display = 'none'
   }
   function deleteNote(id) {
     setNotes((data) => data.filter((elem, i) => i !== id))
     setShowEditModal(false)
   }
-  function editNote(id){
-      setTitle(notes[id].title)
-      setDescription(notes[id].description)
-      setShowEditModal(true)
+  function editNote(id) {
+    setTitle(notes[id].title)
+    setDescription(notes[id].description)
+    setShowEditModal(true)
   }
+  useEffect(() => {
+    const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
+    setNotes(savedNotes);
+  }, []);
+  useEffect(() => {
+    localStorage.setItem('notes', JSON.stringify(notes));
+  }, [notes]);
   return (<>
-  <h2>Notes Modal</h2>
+    <h2>Notes Modal</h2>
     <form className='form' onSubmit={(event) => {
       event.preventDefault()
     }}>
@@ -59,9 +75,9 @@ function NoteTakingApp() {
         </div>
       })}
     </div>
-    {showEditModal && (<div className='modal'>
+    {showEditModal && (<div ref={firstref} className='modal'>
       <h2>Edit Modal</h2>
-      <form className='form' onSubmit={(event) => {
+      <div className='form' onSubmit={(event) => {
         event.preventDefault()
       }}>
         <input
@@ -83,8 +99,8 @@ function NoteTakingApp() {
           cols="50"
           required
         ></textarea>
-        <button className='submitButton' type='submit' onClick={buttonSubmit} >Update</button>
-      </form>
+        <button className='submitButton' type='submit' onClick={removeModal} >Update</button>
+      </div>
     </div>)}
   </>)
 }

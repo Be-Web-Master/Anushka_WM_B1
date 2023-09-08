@@ -45,3 +45,13 @@
 .editNote{
   font-size: 12px;
 }
+.modal{
+  padding: 30px;
+  width: 450px;
+  background-color: bisque;
+  border-radius: 5px;
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
