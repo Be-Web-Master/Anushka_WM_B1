@@ -1,26 +1,13 @@
 import './App.css'
-import { useState, useRef ,useEffect} from 'react'
+import { useState, useRef } from 'react'
 function NoteTakingApp() {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [notes, setNotes] = useState([])
   const [showEditModal, setShowEditModal] = useState(false);
   const firstref = useRef(null)
-
-  const buttonSubmit = () => {
-    const newNotes = { title, description }
-    setNotes([...notes, newNotes])
-    setTitle('')
-    setDescription('')
-  }
-  const removeModal = () => {
-    const newNotes = { title, description }
-    setNotes([...notes, newNotes])
-    setTitle('')
-    setDescription('')
-    const f = firstref.current
-    console.log(firstref)
-    f.style.display = 'none'
+  const updateNotes = () => {
+    setTitle()
   }
   function deleteNote(id) {
     setNotes((data) => data.filter((elem, i) => i !== id))
@@ -31,13 +18,12 @@ function NoteTakingApp() {
     setDescription(notes[id].description)
     setShowEditModal(true)
   }
-  useEffect(() => {
-    const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
-    setNotes(savedNotes);
-  }, []);
-  useEffect(() => {
-    localStorage.setItem('notes', JSON.stringify(notes));
-  }, [notes]);
+  const buttonSubmit = () => {
+    const newNotes = { title, description }
+    setNotes([...notes, newNotes])
+    setTitle('')
+    setDescription('')
+  }
   return (<>
     <h2>Notes Modal</h2>
     <form className='form' onSubmit={(event) => {
@@ -62,7 +48,7 @@ function NoteTakingApp() {
         cols="50"
         required
       ></textarea>
-      <button className='submitButton' type='submit' onClick={buttonSubmit} >Submit</button>
+      <button className='submitButton' type='submit' onClick={buttonSubmit} disabled={!(title && description)} >Submit</button>
     </form>
 
     <div className='Note'>
@@ -99,7 +85,7 @@ function NoteTakingApp() {
           cols="50"
           required
         ></textarea>
-        <button className='submitButton' type='submit' onClick={removeModal} >Update</button>
+        <button className='submitButton' type='submit' onClick={updateNotes} disabled={!(title && description)} >Update</button>
       </div>
     </div>)}
   </>)
