@@ -85,7 +85,7 @@ function NoteTakingApp() {
           cols="50"
           required
         ></textarea>
-        <button className='submitButton' type='submit' onClick={updateNotes} disabled={!(title && description)} >Update</button>
+        <button className='submitButton' type='submit' onClick={updateNotes} >Update</button>
       </div>
     </div>)}
   </>)
