@@ -5,13 +5,15 @@ import { DataList, dataArray } from "./DataList"
 import { UseRefDemo } from "./UseRefDemo";
 import { UseContextdemo } from "./UseContextdemo";
 import { UseReducerDemo } from "./UseReducerDemo";
+import { ReduxDemo } from "./reduxFiles/reduxDemo";
 const ReactComp = () => {
 
   return (<>
     {/* <UseEffectComp /> */}
     {/* <UseRefDemo /> */}
     {/* <UseContextdemo /> */}
-    <UseReducerDemo />
+    {/* <UseReducerDemo /> */}
+    <ReduxDemo/>
   </>)
 
   //   const increaseCount = () => {
