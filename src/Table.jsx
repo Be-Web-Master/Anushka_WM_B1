@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import "./App.css";
 const Table = () => {
@@ -14,7 +14,56 @@ const Table = () => {
     columnName: "",
     columnComponentType: ""
   });
-
+  const getRowsByGroup =(userIdGroup)=>{
+    const rowData=[]
+    for(const key in userIdGroup){
+      userIdGroup[key].map((data,index)=>{
+        if(rowData[index]){
+          rowData[index]?.cells?.push(({
+            cellValue:data
+          }))
+        }else{
+          rowData[index]={
+            cells:[{
+              cellValue:data
+            }]
+          }
+        }
+      })
+    }
+    console.log(rowData)
+    return rowData
+  }
+const setDataInState =(dataList)=>{
+  const userIdGroup = {}
+  dataList.map((data)=>{
+    if(!userIdGroup[data.userId]){
+      userIdGroup[data.userId] = [data.title]
+    }else{
+      userIdGroup[data.userId] = [...userIdGroup[data.userId],data.title]
+    }
+    const userIds = Object.keys(userIdGroup);
+    const columnData = userIds.map((userId)=>{
+      return({
+        columnName: userId,
+        columnComponentType:"input"
+      })
+    })
+    console.log({columnData});
+    const rowData = getRowsByGroup(userIdGroup)
+    setTableState({columns :columnData,rows:rowData})
+  })
+}
+  async function getApiData() {
+    const url = 'https://jsonplaceholder.typicode.com/posts';
+      const response = await fetch(url);
+      const result = await response.json();
+      // console.log(result);
+      setDataInState(result)
+  }
+  useEffect(()=> {
+    getApiData()
+  },[])
   const resetColumnForm = () => {
     setAddColumnFormState({
       columnName: "",
@@ -212,6 +261,8 @@ const AddRowAlert = (props) => {
     </ModalComponent>
   );
 };
+
+
 
 // const [modalOpen, setModalOpen, ModalComponent] = useModal(AddColumnModal);
 // const useModal = (AddColumnModal) => {

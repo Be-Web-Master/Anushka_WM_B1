@@ -41,7 +41,9 @@
 .App-link {
   color: #61dafb;
 }
-
+.active-nav{
+  color: Red;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
